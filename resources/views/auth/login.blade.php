@@ -62,7 +62,7 @@
                         </div>
 
                         <a class="btn btn-primary" href="{{ route("login.github") }}">
-                            Github login
+                            kaka login
                         </a>
 
                         <a class="btn btn-primary" href="{{ url('/login/facebook') }}">
