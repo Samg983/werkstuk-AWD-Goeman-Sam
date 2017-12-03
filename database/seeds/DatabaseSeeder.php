@@ -11,7 +11,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        //Juiste volgorde!
+        $this->call(RoleCsvTableSeeder::class);
         $this->call(UserCsvSeeder::class);
+        $this->call(RoleUserTableCsvSeeder::class);
         $this->call(BlogPostCsvSeeder::class);
     }
 }

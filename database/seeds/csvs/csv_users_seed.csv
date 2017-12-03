@@ -1,2 +1,3 @@
 id,name,email,password,remember_token,created_at,updated_at
-2,testcsv,test@csv.be,$2y$10$D2tTg/5Jpr0MTXrT0Zr7w.op1RU62ICzYUD1ct4Bbv7q/vT4MtRvu,jOoLis9KCodfzShlEEvQB1wX6Z2GssKBp24RRWMgZxxnd7XW27r0SrIBsgXX,2017-12-01 09:39:02,2017-12-01 09:39:02
+0,sam,sam.goeman@hotmail.com,$2y$10$oEmgiMTpDunxRHWzXkavL.htD7lbBKF4vkbNxf1XqZOehOGasS1eW,SAgquTlPgZHoHxsjyNGFSdlPlfUOoaDNmdYkAzjt5DfNsdl9ZyeuD0QVj7y4,2017-12-01 09:39:02,2017-12-01 09:39:02
+0,testcsv,test@csv.be,$2y$10$D2tTg/5Jpr0MTXrT0Zr7w.op1RU62ICzYUD1ct4Bbv7q/vT4MtRvu,jOoLis9KCodfzShlEEvQB1wX6Z2GssKBp24RRWMgZxxnd7XW27r0SrIBsgXX,2017-12-01 09:39:02,2017-12-01 09:39:02
