@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\BlogPost;
+use App\Like;
 use Illuminate\Http\Request;
 
 class BlogPostController extends Controller
@@ -87,5 +88,17 @@ class BlogPostController extends Controller
     public function destroy(Photo $photo)
     {
         //
+    }
+
+
+    public function postLike(Request $request)
+    {
+        $blog_post_id = $request->input("blog_post_id");
+
+        $blogpost = BlogPost::find($blog_post_id);
+        $like = new Like();
+        $blogpost->likes()->save($like);
+
+        return redirect()->back();
     }
 }

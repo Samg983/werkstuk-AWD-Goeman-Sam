@@ -11,10 +11,21 @@
 |
 */
 
+// GET routes
 Route::get('/', [
     'uses' => 'HomeController@index',
     'as' => 'home'
 ]);
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+//POST routes
+Route::post('like', [
+    'uses' => 'BlogPostController@postLike',
+    'as' => 'blogpost.like'
+]);
+
+//RESOURCES routes
 
 Route::resources([
     'blogposts' => 'BlogPostController'
@@ -26,4 +37,6 @@ Route::get('login/github/callback', 'AuthController@handleProviderCallback');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+
+

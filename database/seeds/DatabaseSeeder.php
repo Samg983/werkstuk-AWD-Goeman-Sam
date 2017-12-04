@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
         $this->call(UserCsvSeeder::class);
         $this->call(RoleUserTableCsvSeeder::class);
         $this->call(BlogPostCsvSeeder::class);
+        $this->call(TagTableCsvSeeder::class);
     }
 }

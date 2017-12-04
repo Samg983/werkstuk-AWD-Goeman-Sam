@@ -23,10 +23,22 @@
                 <div class="card-body">
                     <h4 class="card-title">{{ $blogpost->title }}</h4>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Like</a>
+                    <p>
+                        {{ count($blogpost->likes) }}
+                    </p>
+                    <form action="{{ route("blogpost.like") }}" method="post">
+                        <input type="hidden" class="form-control" id="blog_post_id" name="blog_post_id"
+                               value="{{ $blogpost->id }}">
+
+                        {{ csrf_field() }}
+
+                        <input type="submit" class="form-control btn btn-primary" id="like" name="like" value="Like">
+                    </form>
                 </div>
             </div>
             @endforeach
+
+
            <div class="row">
                <div class="col-lg-4 offset-lg-4 text-center">
                    {{ $blogposts->links() }}
