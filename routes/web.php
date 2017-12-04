@@ -20,7 +20,8 @@ Route::get('/', [
 
 Route::get('/admin', [
     'uses' => 'BlogPostController@getAdminIndex',
-    'as' => 'admin.index'
+    'as' => 'admin.index',
+    'middleware' => 'auth'
 ]);
 
 Route::get('/home', 'HomeController@index')->name('home');
