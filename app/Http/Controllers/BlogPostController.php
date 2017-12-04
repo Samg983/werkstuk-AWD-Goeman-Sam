@@ -8,10 +8,7 @@ use Illuminate\Http\Request;
 class BlogPostController extends Controller
 {
 
-    public function __construct()
-    {
 
-    }
 
     /**
      * Display a listing of the resource.
@@ -20,7 +17,7 @@ class BlogPostController extends Controller
      */
     public function index()
     {
-        //
+        return 'alle posts';
     }
 
     /**
@@ -28,8 +25,11 @@ class BlogPostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        //$this->middleware("auth");
+        //$request->user()->authorizeRoles(['admin']);
+
         return view("blogpost.create");
     }
 

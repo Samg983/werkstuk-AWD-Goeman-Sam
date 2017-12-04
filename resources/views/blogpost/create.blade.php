@@ -3,7 +3,13 @@
 
 
 @section("content")
+
     <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="alert alert-info"></p>
+            </div>
+        </div>
     <form>
         <div class="form-group">
             <label for="exampleInputFile">File input</label>
