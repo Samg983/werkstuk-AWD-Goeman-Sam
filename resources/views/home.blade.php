@@ -18,7 +18,7 @@
 
 
             @foreach($blogposts as $blogpost)
-            <div class="card" style="width: 20rem;">
+            <div class="card col-xs-4">
                 <img class="card-img-top" src="..." alt="Card image cap">
                 <div class="card-body">
                     <h4 class="card-title">{{ $blogpost->title }}</h4>

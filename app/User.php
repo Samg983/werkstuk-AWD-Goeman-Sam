@@ -19,17 +19,11 @@ class User extends Authenticatable
      */
 
     public function authorizeRoles($roles)
-
     {
-
         if (is_array($roles)) {
-
             return $this->hasAnyRole($roles) || redirect('/welcome')->with('status', 'Unauthorized!');
-
         }
-
         return $this->hasRole($roles) || redirect('/welcome')->with('status', 'Unauthorized!');
-
     }
 
     /**
