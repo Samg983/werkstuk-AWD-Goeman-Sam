@@ -12,14 +12,21 @@
 */
 
 // GET routes
+
 Route::get('/', [
     'uses' => 'HomeController@index',
     'as' => 'home'
 ]);
 
+Route::get('/admin', [
+    'uses' => 'BlogPostController@getAdminIndex',
+    'as' => 'admin.index'
+]);
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 //POST routes
+
 Route::post('like', [
     'uses' => 'BlogPostController@postLike',
     'as' => 'blogpost.like'

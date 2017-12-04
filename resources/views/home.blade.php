@@ -22,7 +22,7 @@
                 <img class="card-img-top" src="..." alt="Card image cap">
                 <div class="card-body">
                     <h4 class="card-title">{{ $blogpost->title }}</h4>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">{{ $blogpost->content }}</p>
                     <p>
                         {{ count($blogpost->likes) }}
                     </p>
@@ -40,7 +40,7 @@
 
 
            <div class="row">
-               <div class="col-lg-4 offset-lg-4 text-center">
+               <div class="col-md-8 col-md-offset-2 text-center">
                    {{ $blogposts->links() }}
                </div>
            </div>

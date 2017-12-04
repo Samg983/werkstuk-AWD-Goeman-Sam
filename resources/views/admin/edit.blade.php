@@ -25,11 +25,11 @@
             <form action="{{ route("blogposts.store") }}" method="post">
                 <div class="form-group">
                     <label for="title">Title</label>
-                    <input type="text" class="form-control" id="title" name="title">
+                    <input type="text" class="form-control" id="title" name="title" value="{{ $editBlogPost->title }}">
                 </div>
                 <div class="form-group">
                     <label for="content">Content</label>
-                    <input type="text" class="form-control" id="content" name="content">
+                    <textarea type="text" class="form-control" id="content" name="content">{{ $editBlogPost->content }}</textarea>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputFile">File input</label>
@@ -39,7 +39,7 @@
 
                 @foreach($tags as $tag)
                     <div class="checkbox">
-                        <label><input type="checkbox" value="{{ $tag->id }}" name="tags[]">{{ $tag->name }}</label>
+                        <label><input type="checkbox" value="{{ $tag->id }}" {{ $editBlogPost->tags->contains($tag->id) ? 'checked' : '' }} name="tags[]">{{ $tag->name }}</label>
                     </div>
                 @endforeach
 
