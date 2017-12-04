@@ -19,7 +19,7 @@ class TagTableCsvSeeder extends CsvSeeder
     {
         // Recommended when importing larger CSVs
         DB::disableQueryLog();
-//trololo
+
         // Uncomment the below to wipe the table clean before populating
         DB::table($this->table)->truncate();
 
