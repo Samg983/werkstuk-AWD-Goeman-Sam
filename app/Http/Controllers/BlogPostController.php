@@ -10,6 +10,10 @@ use Illuminate\Http\Request;
 class BlogPostController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware('auth')->except('index');
+    }
 
 
     /**
@@ -100,7 +104,7 @@ class BlogPostController extends Controller
      */
     public function update(Request $request, BlogPost $blogpost)
     {
-        //
+        return "hier wordt geupdate";
     }
 
     /**

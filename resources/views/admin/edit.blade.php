@@ -21,8 +21,8 @@
 
     <div class="row">
         <div class="container">
-            <h3>Create blogpost</h3>
-            <form action="{{ route("blogposts.store") }}" method="post">
+            <h3>Edit blogpost</h3>
+            <form action="{{ route("blogposts.update", ['blogpost' => $editBlogPost]) }}" method="PATCH">
                 <div class="form-group">
                     <label for="title">Title</label>
                     <input type="text" class="form-control" id="title" name="title" value="{{ $editBlogPost->title }}">

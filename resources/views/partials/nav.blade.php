@@ -29,6 +29,20 @@
                 @guest
                     <li><a href="{{ route('login') }}">Login</a></li>
                     <li><a href="{{ route('register') }}">Register</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            {{ Config::get('languages')[App::getLocale()] }}
+                        </a>
+                        <ul class="dropdown-menu">
+                            @foreach (Config::get('languages') as $lang => $language)
+                                @if ($lang != App::getLocale())
+                                    <li>
+                                        <a href="{{ route('lang.switch', $lang) }}">{{$language}}</a>
+                                    </li>
+                                @endif
+                            @endforeach
+                        </ul>
+                    </li>
                     @else
                         <li><a href="">Blogs</a></li>
                         <li><a href="">About</a></li>

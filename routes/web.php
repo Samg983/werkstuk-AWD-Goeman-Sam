@@ -14,7 +14,7 @@
 // GET routes
 
 Route::get('/', [
-    'uses' => 'HomeController@index',
+    'uses' => 'BlogPostController@index',
     'as' => 'home'
 ]);
 
@@ -44,6 +44,13 @@ Route::get('login/github', 'AuthController@redirectToProvider')->name("login.git
 Route::get('login/github/callback', 'AuthController@handleProviderCallback');
 
 Auth::routes();
+
+// languages Routes
+
+Route::get('lang/{lang}', [
+    'uses'=>'LanguageController@switchLang',
+    'as'=>'lang.switch',
+]);
 
 
 
